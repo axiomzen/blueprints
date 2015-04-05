@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h2 Word Chain Game
+  .row
+    .col-md-8
+      form.view-login
+        .form-group
+          label Input your name
+          input.form-control.username
+        button.btn.btn-primary(type="submit") Join
+      form.view-game.row-fluid
+        .center-block.wall
+          h1.word
+          label.help-block.bywho
+        .form-group
+          label.help-block Input a word that can chain with the last character of the word above
+          input.form-control.chain
+        button.btn.btn-default(type="submit") Chain
+    .col-md-4
+      .view-game
+        ul.users
+
+  script(src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+  script(src='//cdn.socket.io/socket.io-1.0.5.js')
+  script(src='/javascripts/app.js')

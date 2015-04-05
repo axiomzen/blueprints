@@ -1,0 +1,12 @@
+var express = require('express');
+var app     = express();
+var config  = require('../config')(app.get('env'));
+var models  = require('./models')(config.dbUrl);
+app.set('models', models);
+var mailer = require('./mailer')(config.email, models);
+app.set('mailer', mailer);
+var tasks = require('./tasks')(models,mailer);
+app.set('tasks', tasks);
+tasks.init();
+app.use(require('./routes')(models));
+module.exports = app;

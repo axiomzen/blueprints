@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    title Koa News
+  body
+    h1 Koa News
+    div
+      each link in links
+        .link-row
+          a(href='#', onclick="upvote('#{link._id}', $(this))") ^
+          span &nbsp;
+          a(href=link.URL)= link.title
+          .count= link.upvotes
+            |  votes
+    h2 Submit your link:
+    form(action='/links', method='post')
+      label Title:
+      input(name='title', placeholder="Title")
+      br
+      label URL:
+      input(name='URL', placeholder="https://")
+      br
+      br
+      button.submit-btn Submit
+    script(src="https://code.jquery.com/jquery-2.1.3.min.js")
+    script.
+      var upvote = function(id, elem) {
+        $.ajax({url:'/links/'+id+'/upvote', type:'put' })
+        .done(function(data) {
+          elem.siblings('.count').text(data.upvotes + ' votes');
+        })
+      }

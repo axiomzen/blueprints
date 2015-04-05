@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.wall {
+  width: 600px;
+}
+.word {
+  line-height: 300px;
+  text-align: center;
+}
+.view-game {
+  display: none;
+}

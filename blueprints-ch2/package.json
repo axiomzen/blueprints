@@ -1,0 +1,25 @@
+{
+  "name": "chapter2",
+  "version": "0.0.0",
+  "description": "Blueprints - Chapter 2",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -b",
+    "start": "node app.js"
+  },
+  "author": "AxiomZen",
+  "homepage": "https://github.com/axiomzen/blueprints-ch2",
+  "dependencies": {
+    "express": "^4.7.2",
+    "mongoose": "^3.8.14",
+    "body-parser": "^1.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.3",
+    "should": "^4.0.4",
+    "supertest": "^0.13.0"
+  }
+}

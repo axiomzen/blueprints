@@ -1,0 +1,10 @@
+html
+  body
+    h1 
+      =user.email
+    h2
+      =user.created_at
+    - for (var prop in user.profile)
+      if user.profile[prop]
+        h4
+          =prop + "=" + user.profile[prop]

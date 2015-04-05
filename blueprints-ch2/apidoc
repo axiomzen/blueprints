@@ -1,0 +1,20 @@
+GET     /movies
+POST    /movies
+
+GET     /movies/:id
+PUT     /movies/:id
+DELETE  /movies/:id
+
+GET     /movies/:id/actors
+POST    /movies/:id/actors
+
+DELETE  /movies/:id/actors/:aid
+
+
+
+GET     /actors
+POST    /actors
+
+GET     /actors/:id
+PUT     /actors/:id
+DELETE  /actors/:id
